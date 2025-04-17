@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    platform: linux/amd64
+    image: postgis/postgis:16-3.4
+    container_name: postgis-db
+    environment:
+      POSTGRES_DB: opengis
+      POSTGRES_USER: opengis_user
+      POSTGRES_PASSWORD: opengis_pass
+    ports:
+      - "5462:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

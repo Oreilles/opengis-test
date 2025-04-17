@@ -1,0 +1,6 @@
+.DS_Store
+.vscode
+.venv
+__pycache__/
+.svelte-kit
+node_modules
